@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Cheng Johnson-chengkun'
 description 'Radio Animation with KeyMaping'
-version '1.0.0'
+version '1.0.2'
 
 
 client_scripts {
