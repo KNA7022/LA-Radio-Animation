@@ -8,19 +8,19 @@ RegisterCommand('+am', function(src, image, grade, name)
 	local inVeh = IsPedInAnyVehicle(GetPlayerPed(-1), false)
 		if DoesEntityExist(ped) and not IsEntityDead(ped) then
 			if not IsPauseMenuActive() then 
-				loadAnimDict("cellphone@")
+				loadAnimDict("anim@male@holding_radio")
 				if not IsPlayerFreeAiming(PlayerId()) then 
-					AttachEntityToEntity(prop, ped, boneIndex, 0.00, 0.00, 0.000, 0.0, 00, 00.0, true, true, true, true, 1, true)
-					TaskPlayAnim(ped, 'cellphone@', 'cellphone_text_in',4.0, -1, -1, 50, 0, false, false, false)
+					AttachEntityToEntity(prop, ped, boneIndex, 0.0750, 0.0230,  -0.0250, -90.0000, 0.00, -59.9999, true, true, true, true, 1, true)
+					TaskPlayAnim(ped, 'anim@male@holding_radio', 'holding_radio_clip',4.0, -1, -1, 50, 0, false, false, false)
 					SetEnableHandcuffs(ped, true)
 				elseif IsPlayerFreeAiming(PlayerId()) then 
-					AttachEntityToEntity(prop, ped, boneIndex, 0.00, 0.00, 0.000, 0.0, 00, 00.0, true, true, true, true, 1, true)
-					TaskPlayAnim(ped, 'cellphone@', 'cellphone_text_in',4.0, -1, -1, 50, 0, false, false, false)
+					AttachEntityToEntity(prop, ped, boneIndex, 0.0750, 0.0230,  -0.0250, -90.0000, 0.00, -59.9999, true, true, true, true, 1, true)
+					TaskPlayAnim(ped, 'anim@male@holding_radio', 'holding_radio_clip',4.0, -1, -1, 50, 0, false, false, false)
 					SetEnableHandcuffs(ped, true)
 				end 
-				   if IsEntityPlayingAnim(GetPlayerPed(PlayerId()), "cellphone@", "cellphone_text_in", 3) then
+				   if IsEntityPlayingAnim(GetPlayerPed(PlayerId()), "cellphone@", "holding_radio_clip", 3) then
 					DisableActions(ped)
-					elseif IsEntityPlayingAnim(GetPlayerPed(PlayerId()), "cellphone@", "cellphone_text_in", 3) then
+					elseif IsEntityPlayingAnim(GetPlayerPed(PlayerId()), "cellphone@", "holding_radio_clip", 3) then
 					DisableActions(ped)
 					end
 			end
